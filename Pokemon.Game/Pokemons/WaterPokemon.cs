@@ -1,0 +1,9 @@
+﻿namespace Pokemon.Game.Pokemons;
+
+internal abstract class WaterPokemon : Pokemon
+{
+    public WaterPokemon(string name, List<Attack> attacks) : base(name, attacks)
+    {
+        Type = ElementType.Water;
+    }
+}

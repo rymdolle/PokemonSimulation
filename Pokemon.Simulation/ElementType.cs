@@ -1,4 +1,4 @@
-﻿namespace Pokemon.Game;
+﻿namespace Pokemon.Simulation;
 
 internal enum ElementType
 {

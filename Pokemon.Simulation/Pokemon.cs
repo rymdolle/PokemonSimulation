@@ -1,4 +1,4 @@
-﻿namespace Pokemon.Game;
+﻿namespace Pokemon.Simulation;
 
 internal abstract class Pokemon(string name, List<Attack> attacks)
 {

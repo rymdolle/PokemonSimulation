@@ -1,4 +1,4 @@
-﻿namespace Pokemon.Game;
+﻿namespace Pokemon.Simulation;
 
 internal class Attack(string name, ElementType type, int power)
 {

@@ -1,4 +1,4 @@
-﻿namespace Pokemon.Game.Pokemons;
+﻿namespace Pokemon.Simulation.Pokemons;
 
 internal abstract class WaterPokemon : Pokemon
 {

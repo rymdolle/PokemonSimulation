@@ -1,6 +1,6 @@
-﻿using Pokemon.Game.Pokemons;
+﻿using Pokemon.Simulation.Pokemons;
 
-namespace Pokemon.Game;
+namespace Pokemon.Simulation;
 
 internal class Program
 {

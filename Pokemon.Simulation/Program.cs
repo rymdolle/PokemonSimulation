@@ -16,6 +16,7 @@ internal class Program
             new Charmander([scratch, ember]),
             new Bulbasaur([tackle, vineWhip]),
             new Squirtle([tackle, waterGun]),
+            new Snorlax([tackle]),
         ];
 
         foreach (Pokemon pokemon in pokemons)

@@ -33,17 +33,53 @@ internal abstract class Pokemon(string name, List<Attack> attacks)
     {
         int index = _random.Next(Attacks.Count);
         Attack? attack = Attacks.ElementAtOrDefault(index);
-        attack?.Use(_level);
+        attack?.Use(Level);
     }
 
     public void Attack()
     {
-        throw new NotImplementedException();
+        while (true)
+        {
+            Console.WriteLine("Select an attack:");
+            for (int i = 0; i < Attacks.Count; ++i)
+            {
+                Attack attack = Attacks[i];
+                Console.WriteLine($"{i + 1}. {attack.Name} (Type: {attack.Type}, Power: {attack.BasePower})");
+            }
+            int randomAttackIndex = Attacks.Count + 1;
+            Console.WriteLine($"{randomAttackIndex}. Random attack");
+            Console.WriteLine("0. Abort");
+
+            string input = Console.ReadLine() ?? string.Empty;
+            if (int.TryParse(input, out int choice))
+            {
+                if (choice == 0)
+                {
+                    Console.WriteLine("Attack aborted.");
+                    return;
+                }
+                if (choice == randomAttackIndex)
+                {
+                    RandomAttack();
+                    return;
+                }
+                if (choice >= 1 && choice <= Attacks.Count)
+                {
+                    Attack selectedAttack = Attacks[choice - 1];
+                    selectedAttack.Use(Level);
+                    return;
+                }
+            }
+
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("Invalid input. Try again.");
+            Console.ResetColor();
+        }
     }
 
     public void RaiseLevel()
     {
-        _level++;
+        Level++;
         Console.WriteLine($"{Name} leveled up to {Level}!");
     }
 }

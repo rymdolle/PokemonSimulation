@@ -21,7 +21,7 @@ internal class Program
         foreach (Pokemon pokemon in pokemons)
         {
             Console.WriteLine($"A wild {pokemon.Name} appeared!");
-            pokemon.RandomAttack();
+            pokemon.Attack();
             pokemon.RaiseLevel();
             if (pokemon is IEvolvable evolvable)
             {

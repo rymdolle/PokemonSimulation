@@ -23,6 +23,10 @@ internal class Program
             Console.WriteLine($"A wild {pokemon.Name} appeared!");
             pokemon.RandomAttack();
             pokemon.RaiseLevel();
+            if (pokemon is IEvolvable evolvable)
+            {
+                evolvable.Evolve();
+            }
             Console.WriteLine();
         }
     }

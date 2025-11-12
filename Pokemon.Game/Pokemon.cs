@@ -4,6 +4,7 @@ internal abstract class Pokemon(string name, List<Attack> attacks)
 {
     private string _name = name;
     private int _level = 1;
+    private static readonly Random _random = new();
 
     public string Name {
         get => _name;
@@ -30,7 +31,9 @@ internal abstract class Pokemon(string name, List<Attack> attacks)
 
     public void RandomAttack()
     {
-        throw new NotImplementedException();
+        int index = _random.Next(Attacks.Count);
+        Attack? attack = Attacks.ElementAtOrDefault(index);
+        attack?.Use(_level);
     }
 
     public void Attack()
@@ -40,6 +43,7 @@ internal abstract class Pokemon(string name, List<Attack> attacks)
 
     public void RaiseLevel()
     {
-        throw new NotImplementedException();
+        _level++;
+        Console.WriteLine($"{Name} leveled up to {Level}!");
     }
 }

@@ -8,7 +8,7 @@ internal abstract class Pokemon(string name, List<Attack> attacks)
 
     public string Name {
         get => _name;
-        set
+        protected set
         {
             ArgumentException.ThrowIfNullOrWhiteSpace(value, "Pokemon name cannot be null or empty.");
             if (value.Length < 2 || value.Length > 15)
@@ -19,14 +19,14 @@ internal abstract class Pokemon(string name, List<Attack> attacks)
     public int Level
     {
         get => _level;
-        set
+        protected set
         {
             ArgumentOutOfRangeException.ThrowIfLessThan(value, 1);
             _level = value;
         }
     }
 
-    public ElementType Type { get; set; }
+    public ElementType Type { get; protected set; }
     public List<Attack> Attacks { get; } = attacks;
 
     public void RandomAttack()

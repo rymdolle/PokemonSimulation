@@ -4,7 +4,6 @@ internal abstract class Pokemon(string name, List<Attack> attacks)
 {
     private string _name = name;
     private int _level = 1;
-    private static readonly Random _random = new();
 
     public string Name {
         get => _name;
@@ -31,7 +30,7 @@ internal abstract class Pokemon(string name, List<Attack> attacks)
 
     public void RandomAttack()
     {
-        int index = _random.Next(Attacks.Count);
+        int index = Random.Shared.Next(Attacks.Count);
         Attack? attack = Attacks.ElementAtOrDefault(index);
         attack?.Use(Level);
     }

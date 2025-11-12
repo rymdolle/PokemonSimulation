@@ -6,9 +6,9 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        Attack scratch = new("Scratch", ElementType.Physical, 16);
+        Attack scratch = new("Scratch", ElementType.Normal, 16);
         Attack ember = new("Ember", ElementType.Fire, 14);
-        Attack tackle = new("Tackle", ElementType.Physical, 12);
+        Attack tackle = new("Tackle", ElementType.Normal, 12);
         Attack vineWhip = new("Vine Whip", ElementType.Grass, 16);
         Attack waterGun = new("Water Gun", ElementType.Water, 16);
 

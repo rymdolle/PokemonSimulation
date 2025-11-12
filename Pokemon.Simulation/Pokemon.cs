@@ -26,7 +26,7 @@ internal abstract class Pokemon(string name, List<Attack> attacks)
         }
     }
 
-    public ElementType Type { get; protected set; }
+    public ElementType Type { get; protected set; } = ElementType.Normal;
     public List<Attack> Attacks { get; } = attacks;
 
     public void RandomAttack()

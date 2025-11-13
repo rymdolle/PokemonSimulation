@@ -2,5 +2,5 @@
 
 internal interface IEvolvable
 {
-    void Evolve();
+    Pokemon Evolve();
 }

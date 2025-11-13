@@ -19,14 +19,15 @@ internal class Program
             new Snorlax([tackle]),
         ];
 
-        foreach (Pokemon pokemon in pokemons)
+        for (int i = 0; i < pokemons.Count; i++)
         {
+            Pokemon pokemon = pokemons[i];
             Console.WriteLine($"A wild {pokemon.Name} appeared!");
             pokemon.Attack();
             pokemon.RaiseLevel();
             if (pokemon is IEvolvable evolvable)
             {
-                evolvable.Evolve();
+                pokemons[i] = evolvable.Evolve();
             }
             Console.WriteLine();
         }

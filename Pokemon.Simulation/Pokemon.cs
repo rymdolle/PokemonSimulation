@@ -81,4 +81,9 @@ internal abstract class Pokemon(string name, List<Attack> attacks)
         Level++;
         Console.WriteLine($"{Name} leveled up to {Level}!");
     }
+
+    public virtual void Speak()
+    {
+        Console.WriteLine($"{Name} says: Raaargh!");
+    }
 }

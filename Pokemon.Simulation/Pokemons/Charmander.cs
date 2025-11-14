@@ -11,4 +11,8 @@ internal class Charmander(List<Attack> attacks)
         Console.WriteLine($"{oldName} is evolving into {Name} and is now level {Level}!");
         return this;
     }
+    public override void Speak()
+    {
+        Console.WriteLine($"{Name} says: Rrr-char!");
+    }
 }

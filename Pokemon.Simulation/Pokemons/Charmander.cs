@@ -3,6 +3,7 @@
 internal class Charmander(List<Attack> attacks, int level)
     : FirePokemon("Charmander", attacks, level), IEvolvable
 {
+    public int EvolveAtLevel => 8;
     public Pokemon Evolve()
     {
         Pokemon evolved = new Charmeleon(Attacks, Level + 10);

@@ -76,10 +76,15 @@ internal abstract class Pokemon(string name, List<Attack> attacks, int level)
         }
     }
 
-    public void RaiseLevel()
+    public Pokemon RaiseLevel()
     {
         Level++;
         Console.WriteLine($"{Name} leveled up to {Level}!");
+        if (this is IEvolvable evolvable && Level >= evolvable.EvolveAtLevel)
+        {
+            return evolvable.Evolve();
+        }
+        return this;
     }
 
     public virtual void Speak()

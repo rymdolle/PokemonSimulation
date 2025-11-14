@@ -24,11 +24,7 @@ internal class Program
             Pokemon pokemon = pokemons[i];
             Console.WriteLine($"A wild {pokemon.Name} appeared!");
             pokemon.Attack();
-            pokemon.RaiseLevel();
-            if (pokemon is IEvolvable evolvable)
-            {
-                pokemons[i] = evolvable.Evolve();
-            }
+            pokemons[i] = pokemon.RaiseLevel();
             Console.WriteLine();
         }
     }

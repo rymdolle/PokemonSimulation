@@ -3,6 +3,8 @@
 internal class Wartortle(List<Attack> attacks, int level)
     : WaterPokemon("Wartortle", attacks, level), IEvolvable
 {
+    public int EvolveAtLevel => 17;
+
     public Pokemon Evolve()
     {
         Pokemon evolved = new Blastoise(Attacks, Level + 10);

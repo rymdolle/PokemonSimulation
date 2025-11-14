@@ -3,6 +3,8 @@
 internal class Squirtle(List<Attack> attacks, int level)
     : WaterPokemon("Squirtle", attacks, level), IEvolvable
 {
+    public int EvolveAtLevel => 8;
+
     public Pokemon Evolve()
     {
         Pokemon evolved = new Wartortle(Attacks, Level + 10);

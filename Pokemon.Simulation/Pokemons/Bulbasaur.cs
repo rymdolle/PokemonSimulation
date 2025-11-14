@@ -3,6 +3,7 @@
 internal class Bulbasaur(List<Attack> attacks, int level)
     : GrassPokemon("Bulbasaur", attacks, level), IEvolvable
 {
+    public int EvolveAtLevel => 7;
     public Pokemon Evolve()
     {
         Pokemon evolved = new Ivysaur(Attacks, Level + 10);

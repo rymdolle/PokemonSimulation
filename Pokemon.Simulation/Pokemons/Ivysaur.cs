@@ -3,6 +3,8 @@
 internal class Ivysaur(List<Attack> attacks, int level)
     : GrassPokemon("Ivysaur", attacks, level), IEvolvable
 {
+    public int EvolveAtLevel => 18;
+
     public Pokemon Evolve()
     {
         Pokemon evolved = new Venusaur(Attacks, Level + 10);

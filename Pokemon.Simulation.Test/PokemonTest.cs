@@ -1,4 +1,4 @@
-﻿using Pokemon.Simulation.Pokemons;
+﻿using Pokemon.Simulation.Creatures;
 
 namespace Pokemon.Simulation.Test;
 

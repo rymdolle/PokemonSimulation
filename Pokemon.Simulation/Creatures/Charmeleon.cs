@@ -1,4 +1,6 @@
-﻿namespace Pokemon.Simulation.Pokemons;
+﻿using Pokemon.Simulation.Creatures.Types;
+
+namespace Pokemon.Simulation.Creatures;
 
 internal class Charmeleon(List<Attack> attacks, int level)
     : FirePokemon("Charmeleon", attacks, level), IEvolvable

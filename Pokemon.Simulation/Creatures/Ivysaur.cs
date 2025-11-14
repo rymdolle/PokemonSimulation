@@ -1,4 +1,6 @@
-﻿namespace Pokemon.Simulation.Pokemons;
+﻿using Pokemon.Simulation.Creatures.Types;
+
+namespace Pokemon.Simulation.Creatures;
 
 internal class Ivysaur(List<Attack> attacks, int level)
     : GrassPokemon("Ivysaur", attacks, level), IEvolvable

@@ -1,4 +1,4 @@
-﻿namespace Pokemon.Simulation.Pokemons;
+﻿namespace Pokemon.Simulation.Creatures.Types;
 
 internal abstract class FirePokemon : Pokemon
 {

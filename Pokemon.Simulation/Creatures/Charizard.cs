@@ -1,4 +1,6 @@
-﻿namespace Pokemon.Simulation.Pokemons;
+﻿using Pokemon.Simulation.Creatures.Types;
+
+namespace Pokemon.Simulation.Creatures;
 
 internal class Charizard : FirePokemon
 {

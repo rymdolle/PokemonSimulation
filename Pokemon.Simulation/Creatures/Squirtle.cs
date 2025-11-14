@@ -1,4 +1,6 @@
-﻿namespace Pokemon.Simulation.Pokemons;
+﻿using Pokemon.Simulation.Creatures.Types;
+
+namespace Pokemon.Simulation.Creatures;
 
 internal class Squirtle(List<Attack> attacks, int level)
     : WaterPokemon("Squirtle", attacks, level), IEvolvable

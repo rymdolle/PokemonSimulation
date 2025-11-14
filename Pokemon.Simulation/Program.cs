@@ -13,10 +13,10 @@ internal class Program
         Attack waterGun = new("Water Gun", ElementType.Water, 16);
 
         List<Pokemon> pokemons = [
-            new Charmander([scratch, ember]),
-            new Bulbasaur([tackle, vineWhip]),
-            new Squirtle([tackle, waterGun]),
-            new Snorlax([tackle]),
+            new Charmander([scratch, ember], 1),
+            new Bulbasaur([tackle, vineWhip], 4),
+            new Squirtle([tackle, waterGun], 1),
+            new Snorlax([tackle], 1),
         ];
 
         for (int i = 0; i < pokemons.Count; i++)

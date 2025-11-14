@@ -1,16 +1,15 @@
 ﻿namespace Pokemon.Simulation.Pokemons;
 
-internal class Charmander(List<Attack> attacks)
-    : FirePokemon("Charmander", attacks), IEvolvable
+internal class Charmander(List<Attack> attacks, int level)
+    : FirePokemon("Charmander", attacks, level), IEvolvable
 {
     public Pokemon Evolve()
     {
-        string oldName = Name;
-        Name = "Charmeleon";
-        Level += 10;
-        Console.WriteLine($"{oldName} is evolving into {Name} and is now level {Level}!");
-        return this;
+        Pokemon evolved = new Charmeleon(Attacks, Level + 10);
+        Console.WriteLine($"{Name} has evolved into {evolved.Name}!");
+        return evolved;
     }
+
     public override void Speak()
     {
         Console.WriteLine($"{Name} says: Rrr-char!");

@@ -2,7 +2,8 @@
 
 internal abstract class FirePokemon : Pokemon
 {
-    public FirePokemon(string name, List<Attack> attacks) : base(name, attacks)
+    public FirePokemon(string name, List<Attack> attacks, int level)
+        : base(name, attacks, level)
     {
         Type = ElementType.Fire;
     }

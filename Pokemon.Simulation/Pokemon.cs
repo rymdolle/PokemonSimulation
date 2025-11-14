@@ -1,9 +1,9 @@
 ﻿namespace Pokemon.Simulation;
 
-internal abstract class Pokemon(string name, List<Attack> attacks)
+internal abstract class Pokemon(string name, List<Attack> attacks, int level)
 {
     private string _name = name;
-    private int _level = 1;
+    private int _level = level;
 
     public string Name {
         get => _name;

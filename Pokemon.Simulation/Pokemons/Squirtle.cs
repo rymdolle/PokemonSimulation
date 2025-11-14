@@ -1,15 +1,13 @@
 ﻿namespace Pokemon.Simulation.Pokemons;
 
-internal class Squirtle(List<Attack> attacks)
-    : WaterPokemon("Squirtle", attacks), IEvolvable
+internal class Squirtle(List<Attack> attacks, int level)
+    : WaterPokemon("Squirtle", attacks, level), IEvolvable
 {
     public Pokemon Evolve()
     {
-        string oldName = Name;
-        Name = "Wartortle";
-        Level += 10;
-        Console.WriteLine($"{oldName} is evolving into {Name} and is now level {Level}!");
-        return this;
+        Pokemon evolved = new Wartortle(Attacks, Level + 10);
+        Console.WriteLine($"{Name} is evolving into {evolved.Name} and is now level {evolved.Level}!");
+        return evolved;
     }
 
     public override void Speak()
